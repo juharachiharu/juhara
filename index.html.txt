@@ -1,10 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First Website</title>
+  <meta charset="UTF-8">
+  <title>Juhara | Fantasy Illustrator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello World</h1>
-  <p>เว็บแรกของฉันบน GitHub</p>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1>JUHARA</h1>
+    <p>Fantasy Game & Live2D Illustrator</p>
+  </div>
+</header>
+
+<section class="gallery">
+  <h2>Selected Works</h2>
+  <div class="grid">
+    <img src="images/art1.jpg" alt="">
+    <img src="images/art2.jpg" alt="">
+    <img src="images/art3.jpg" alt="">
+    <img src="images/art4.jpg" alt="">
+  </div>
+</section>
+
+<section class="about">
+  <h2>About</h2>
+  <p>
+    Illustrator specializing in fantasy game art, character design,
+    and Live2D illustrations. Open for commission worldwide.
+  </p>
+</section>
+
+<section class="contact">
+  <h2>Commission</h2>
+  <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+</section>
+
+<footer>
+  <p>© 2026 Juhara</p>
+</footer>
+
 </body>
 </html>
