@@ -1,109 +1,69 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Juhara | Fantasy Illustrator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* BASE */
-body {
-  font-family: 'Inter', sans-serif;
-  background: #000;
-  color: #fff;
-  line-height: 1.6;
-}
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 
-/* HERO */
-.hero {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
+<body>
 
-/* VIDEO */
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
+<!-- HERO -->
+<header class="hero">
 
-/* DOT MESH + DARK FILTER */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="video/bg.mp4" type="video/mp4">
+  </video>
 
-  background-color: rgba(0, 0, 0, 0.4);
-  background-image:
-    radial-gradient(rgba(0,0,0,0.7) 1px, transparent 1px);
-  background-size: 4px 4px;
+  <div class="hero-content">
+    <h1>JUHARA</h1>
+    <p>Fantasy Game & Live2D Illustrator</p>
+  </div>
 
-  mix-blend-mode: multiply;
-}
+</header>
 
-/* LOCAL DARK MASK (FOCUS TEXT) */
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
+<!-- SELECTED WORKS -->
+<section class="gallery">
+  <h2>Selected Works</h2>
 
-  background: radial-gradient(
-    circle at center,
-    rgba(0,0,0,0.45) 0%,
-    rgba(0,0,0,0.2) 40%,
-    rgba(0,0,0,0) 75%
-  );
-}
+  <div class="grid">
+    <img src="images/art1.jpg" alt="">
+    <img src="images/art2.jpg" alt="">
+    <img src="images/art3.jpg" alt="">
+    <img src="images/art4.jpg" alt="">
+  </div>
+</section>
 
-/* TEXT */
-.hero-content {
-  position: relative;
-  z-index: 3;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+<!-- ABOUT -->
+<section class="about">
+  <h2>About</h2>
+  <p>
+    Illustrator specializing in fantasy game art, character design,
+    and Live2D illustrations. Open for commission worldwide.
+  </p>
+</section>
 
-.hero-content h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
-  letter-spacing: 0.25em;
-  font-weight: 600;
-  line-height: 1;
-  margin-bottom: 0;
+<!-- COMMISSION -->
+<section class="commission">
+  <h2>Commission</h2>
+  <p>
+    Open for commercial and personal commissions.<br>
+    Please contact via email.
+  </p>
+</section>
 
-  text-shadow:
-    0 0 10px rgba(0,0,0,0.7),
-    0 0 25px rgba(0,0,0,0.5);
-}
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Contact & Payment</h2>
+  <p>Email: <a href="mailto:your@email.com">your@email.com</a></p>
+</section>
 
-.hero-content p {
-  margin-top: -4px;
-  line-height: 1.1;
-  font-size: 0.85rem;
-  letter-spacing: 0.15em;
-  opacity: 0.85;
-}
-/* SCROLL SNAP CONTAINER */
-.snap-container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
+<footer>
+  <p>© 2026 Juhara</p>
+</footer>
 
-/* EACH SECTION */
-.snap-section {
-  height: 100vh;
-  scroll-snap-align: start;
-}
-
+</body>
+</html>
