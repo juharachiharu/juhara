@@ -8,16 +8,16 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body>
 
-<!-- HERO -->
-<header class="hero">
+<!-- 🔽 เพิ่ม class snap-container ที่ body -->
+<body class="snap-container">
+
+<!-- ================= HERO ================= -->
+<header class="hero snap-section">
 
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="video/bg.mp4" type="video/mp4">
   </video>
-
-  <div class="hero-overlay"></div>
 
   <div class="hero-content">
     <h1>JUHARA</h1>
@@ -26,9 +26,10 @@
 
 </header>
 
-<!-- GALLERY -->
-<section class="gallery">
+<!-- ================= SELECTED WORKS ================= -->
+<section class="gallery snap-section">
   <h2>Selected Works</h2>
+
   <div class="grid">
     <img src="images/art1.jpg" alt="">
     <img src="images/art2.jpg" alt="">
@@ -37,8 +38,8 @@
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about">
+<!-- ================= ABOUT ================= -->
+<section class="about snap-section">
   <h2>About</h2>
   <p>
     Illustrator specializing in fantasy game art, character design,
@@ -46,18 +47,32 @@
   </p>
 </section>
 
-<!-- CONTACT -->
-<section class="contact">
+<!-- ================= COMMISSION ================= -->
+<section class="commission snap-section">
   <h2>Commission</h2>
-  <p>Email: <a href="mailto:your@email.com"
+  <p>
+    Open for commercial and personal commissions.<br>
+    Please contact via email.
+  </p>
 </section>
 
-<footer>
+<!-- ================= CONTACT / PAYMENT ================= -->
+<section class="contact snap-section">
+  <h2>Contact & Payment</h2>
+  <p>
+    Email:
+    <a href="mailto:your@email.com">your@email.com</a>
+  </p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="snap-section">
   <p>© 2026 Juhara</p>
 </footer>
 
 </body>
 </html>
+
 
 
 
