@@ -70,8 +70,23 @@ body {
 
   margin-bottom: 0px;    /* ชิดสุด */
   line-height: 1.0;       /* บีบสูงบรรทัด */
+text-shadow:
+    0 0 10px rgba(0,0,0,0.7),
+    0 0 25px rgba(0,0,0,0.5);
 }
-
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.2) 40%,
+    rgba(0,0,0,0) 75%
+  );
+}
 .hero-content p {
   margin-top: -4px;       /* ชิดขึ้นอีก */
   line-height: 1.1;       /* กระชับ */
@@ -123,6 +138,7 @@ footer {
   font-size: 0.8rem;
   opacity: 0.6;
 }
+
 
 
 
