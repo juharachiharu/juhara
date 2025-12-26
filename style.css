@@ -93,3 +93,17 @@ body {
   letter-spacing: 0.15em;
   opacity: 0.85;
 }
+/* SCROLL SNAP CONTAINER */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+/* EACH SECTION */
+.snap-section {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
