@@ -47,6 +47,10 @@ body {
   background-size: 4px 4px;
 }
 
+.hero::before {
+  mix-blend-mode: multiply;
+}
+
 /* TEXT CONTENT */
 .hero-content {
   position: relative;
@@ -114,3 +118,4 @@ footer {
   font-size: 0.8rem;
   opacity: 0.6;
 }
+
