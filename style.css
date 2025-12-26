@@ -20,7 +20,7 @@ body {
   overflow: hidden;
 }
 
-/* VIDEO BACKGROUND */
+/* VIDEO */
 .hero-video {
   position: absolute;
   inset: 0;
@@ -30,7 +30,7 @@ body {
   z-index: 1;
 }
 
-/* 🔥 DOT OVERLAY (อยู่เหนือวิดีโอ ใต้ text) */
+/* DOT MESH + DARK FILTER */
 .hero::before {
   content: "";
   position: absolute;
@@ -38,20 +38,31 @@ body {
   z-index: 2;
   pointer-events: none;
 
-  /* พื้นดำโปร่ง */
-  background-color: rgba(0, 0, 0, 0.35);
-
-  /* DOT MESH */
+  background-color: rgba(0, 0, 0, 0.4);
   background-image:
-    radial-gradient(rgba(0,0,0,0.65) 1px, transparent 1px);
+    radial-gradient(rgba(0,0,0,0.7) 1px, transparent 1px);
   background-size: 4px 4px;
-}
 
-.hero::before {
   mix-blend-mode: multiply;
 }
 
-/* TEXT CONTENT */
+/* LOCAL DARK MASK (FOCUS TEXT) */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle at center,
+    rgba(0,0,0,0.45) 0%,
+    rgba(0,0,0,0.2) 40%,
+    rgba(0,0,0,0) 75%
+  );
+}
+
+/* TEXT */
 .hero-content {
   position: relative;
   z-index: 3;
@@ -67,78 +78,18 @@ body {
   font-size: clamp(3rem, 8vw, 6rem);
   letter-spacing: 0.25em;
   font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0;
 
-  margin-bottom: 0px;    /* ชิดสุด */
-  line-height: 1.0;       /* บีบสูงบรรทัด */
-text-shadow:
+  text-shadow:
     0 0 10px rgba(0,0,0,0.7),
     0 0 25px rgba(0,0,0,0.5);
 }
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background: radial-gradient(
-    circle at center,
-    rgba(0,0,0,0.45) 0%,
-    rgba(0,0,0,0.2) 40%,
-    rgba(0,0,0,0) 75%
-  );
-}
+
 .hero-content p {
-  margin-top: -4px;       /* ชิดขึ้นอีก */
-  line-height: 1.1;       /* กระชับ */
-  font-size: 0.85rem;     /* เล็กลงนิดเพื่อ balance */
+  margin-top: -4px;
+  line-height: 1.1;
+  font-size: 0.85rem;
   letter-spacing: 0.15em;
   opacity: 0.85;
 }
-
-
-/* SECTIONS */
-section {
-  padding: 100px 8vw;
-}
-
-section h2 {
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  margin-bottom: 40px;
-}
-
-/* GALLERY */
-.gallery .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
-}
-
-.gallery img {
-  width: 100%;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
-}
-
-/* CONTACT */
-.contact a {
-  color: #fff;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.4);
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px 0;
-  font-size: 0.8rem;
-  opacity: 0.6;
-}
-
-
-
-
