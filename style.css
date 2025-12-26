@@ -33,15 +33,11 @@ body {
 }
 
 /* DOT / MESH OVERLAY */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background-image: url("images/dot-overlay.png");
-  background-repeat: repeat;
-  opacity: 0.35;          /* ปรับความเข้มของตะแกรง */
-  z-index: 2;
-  pointer-events: none;
+.hero-content {
+  position: relative;
+  z-index: 3;
 }
+
 
 /* TEXT CONTENT */
 .hero-content {
@@ -110,3 +106,4 @@ footer {
   font-size: 0.8rem;
   opacity: 0.6;
 }
+
